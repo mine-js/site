@@ -1,0 +1,30 @@
+<%- include('header') %>
+<%- include('addon_card') %>
+<br/>
+
+<br/><br/><br/>
+
+<h1>Releases</h1>
+
+<% releases.forEach((elem) => { %>
+    <div class="card">
+      <div class="card-body">
+        <% if(elem.address) { %>
+            <a href="<%= elem.address %>" style="text-decoration: none; color: white;"><h5 class="card-title"><%= elem.version %></h5></a>
+        <% } else { %>
+            <a href="#" style="text-decoration: none; color: white;"><h5 class="card-title"><%= elem.version %> (No file)</h5></a>
+        <% } %>
+        <p class="card-text"><small class="text-muted">Created: <%= elem.formattedTime %></small></p>
+        <% if(userId == creator) { %>
+            <a class="btn btn-primary" href="/addon/releases/delete/<%= id %>/<%= creator %>/<%= encodeURIComponent(elem.version) %>" role="button">Delete this release</a>
+            <% if(!elem.address) { %>
+                <a class="btn btn-primary" href="/addon/releases/upload/<%= id %>/<%= creator %>/<%= encodeURIComponent(elem.version) %>" role="button">Upload resource</a><br/>
+            <% } %>
+            <br/><br/>
+        <% } %>
+        <%- elem.formattedUpdates %>
+      </div>
+    </div>
+    <br/>
+<% }) %>
+<%- include('footer') %>

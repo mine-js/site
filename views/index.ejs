@@ -1,0 +1,33 @@
+<%- include('header') %>
+<img style="text-align: center" src="https://avatars.githubusercontent.com/u/94840691?s=200&v=4" alt="..."><br/>
+<span style="font-size: 48px; font-weight: bolder;">Mine.js </span>
+<span style="font-size: 24px;">is a developer-friendly scripting language for the Bukkit!</span>
+
+<br/>
+<br/><br/>
+
+<h3>Example Code</h3>
+<pre>
+<code>let a = 'yep'
+function onInit() {
+  a = storage.get('test')
+  createCommand('hello', [], callback)
+  console.log('ok init succ')
+}
+
+function onPlayerMove(event) {
+  if(event.player.name === 'hiworld') {
+    event.player.send('<red>Don\'t move!')
+    event.setCancelled(true)
+  }
+}
+
+function callback(args, sender) {
+  sender.send('hello')
+  if(sender.type === 'type') {
+    sender.player().teleport(location.create('world', 1, 2, 3))
+  }
+}
+</code>
+</pre>
+<%- include('footer') %>

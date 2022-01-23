@@ -1,0 +1,12 @@
+<%- include('header') %>
+<span style="font-size: 48px; font-weight: bolder;">Upload Jar</span>
+<br/><br/><br/>
+<form method="POST" action="/addon/releases/upload/callback/<%= addon.creator %>/<%= addon.id %>/<%= release.version %>" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="formFile" class="form-label">File</label>
+        <input class="form-control" type="file" id="formFile" name="jar">
+        <div id="emailHelp" class="form-text">Allowed file extensions: .jar<br/>Maximum size: 150mb</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+<%- include('footer') %>

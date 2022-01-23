@@ -1,0 +1,11 @@
+{
+    "host": "localhost",
+    "port": 3306,
+    "user": "root",
+    "password": "asdf",
+    "db": "minejs",
+    "gh_client": "GitHub Oauth Client ID",
+    "gh_secret": "GitHub Oauth Secret",
+    "gh_redirect": "http://localhost:8080/callback"
+}
+

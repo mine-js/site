@@ -1,0 +1,17 @@
+<% if(image === null) { %>
+<img src="/images/noimage.png" width="128" height="128" style="position: absolute; top: 120px; border-radius: 500px;"/>
+<% } else {%>
+<img src="<%= image %>" width="128" height="128" style="position: absolute; top: 120px; border-radius: 500px;"/>
+<% } %>
+<div style="margin-top: 30px; margin-left: 150px;">
+<span style="font-size: 48px; font-weight: bolder;"><%= name %></span>&ensp;<span style="font-size: 24px; margin-left: 12px;"><%= id %></span>
+<br/>
+<% if(userId == creator) { %>
+<a class="btn btn-primary" href="/addon/edit/<%= id %>/<%= creator %>" role="button">Edit the addon information</a>
+<a class="btn btn-danger" href="/addon/delete/<%= id %>/<%= creator %>" role="button">Delete</a>
+<a class="btn btn-primary" href="/addon/releases/create/<%= id %>/<%= creator %>" role="button">Publish</a>
+<a class="btn btn-primary" href="/addon/logo/<%= id %>/<%= creator %>" role="button">Change logo</a>
+<% } %>
+
+<a class="btn btn-primary" href="/addon/releases/<%= id %>" role="button">Releases</a>
+</div>

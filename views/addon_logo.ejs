@@ -1,0 +1,12 @@
+<%- include('header') %>
+<span style="font-size: 48px; font-weight: bolder;">Edit addon</span>
+<br/><br/><br/>
+<form method="POST" action="/addon/logo/callback/<%= creator %>/<%= id %>" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Logo</label>
+        <input class="form-control" type="file" id="formFile" name="logo">
+        <div id="emailHelp" class="form-text">Allowed file extensions: .png, .jpg, .jpeg, .gif<br/>Recommended size: 128x128 (1:1)</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<%- include('footer') %>

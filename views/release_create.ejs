@@ -1,0 +1,18 @@
+<%- include('header') %>
+<h1>Create Release</h1><br/>
+
+<form method="POST" action="/addon/releases/create/callback/<%= creator %>/<%= id %>" enctype="application/x-www-form-urlencoded">
+    <div class="mb-3">
+        <label for="version" class="form-label">Version</label>
+        <input type="text" class="form-control" id="version" maxlength="64" name="version" required>
+    </div>
+    <div class="mb-3">
+        <label for="update" class="form-label">Update Log</label>
+        <textarea class="form-control" id="update" name="update" style="resize: none;" rows="10" required></textarea>
+        <div id="emailHelp" class="form-text">You can use Markdown for update log!</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+
+<%- include('footer') %>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Mine.JS</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">MineJS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://docs.minejs.xyz">Docs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/addon">Addons</a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+            <% if(!userName) { %>
+              <a href="/login" class="btn btn-outline-light">Login</a>
+            <% } else { %>
+              <span class="navbar-text" style="color: white; margin-right: 10px;">
+              <%= userName %>&ensp;
+              </span>
+              <a href="/logout" class="btn btn-outline-light">Logout</a>
+            <% } %>
+            </span>
+          </div>
+        </div>
+      </nav>
+<br/>
+<div class="container">

@@ -1,0 +1,19 @@
+<%- include('header') %>
+<span style="font-size: 48px; font-weight: bolder;">Edit addon</span>
+<br/><br/><br/>
+<form method="POST" action="/addon/edit/callback/<%= creator %>/<%= id %>" enctype="application/x-www-form-urlencoded">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" maxlength="64" name="name" value="<%= name.replace("\"", "") %>" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" name="description" style="resize: none;" rows="10" required><%= description %></textarea>
+        <div id="emailHelp" class="form-text">You can use Markdown for description!</div>
+    </div>
+    <script>
+        console.log('<%= description.replace("\'", "") %>')
+    </script>
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>
+<%- include('footer') %>

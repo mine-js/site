@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+body {
+    background-color: #212529 !important;
+    color: white !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.card {
+  background-color: rgb(59, 59, 59) !important;
+}
+
+pre code {
+    background-color: #1e2124;
+    padding: 20px;
+}
+
+input, textarea, button {
+  color: white !important;
+  background-color: #1e2124 !important;
+}
+
+ .hljs {
+    display: block;
+    overflow-x: auto;
+    /*background: rgb(59, 59, 59);*/
+  }
+  
+  .hljs-built_in,
+  .hljs-selector-tag,
+  .hljs-section,
+  .hljs-link {
+    color: #8be9fd;
+  }
+  
+  .hljs-keyword {
+    color: #ff79c6;
+  }
+  
+  .hljs,
+  .hljs-subst {
+    color: #f8f8f2;
+  }
+  
+  .hljs-title,
+  .hljs-attr,
+  .hljs-meta-keyword {
+    font-style: italic;
+    color: #50fa7b;
+  }
+  
+  .hljs-string,
+  .hljs-meta,
+  .hljs-name,
+  .hljs-type,
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-addition,
+  .hljs-variable,
+  .hljs-template-tag,
+  .hljs-template-variable {
+    color: #f1fa8c;
+  }
+  
+  .hljs-comment,
+  .hljs-quote,
+  .hljs-deletion {
+    color: #6272a4;
+  }
+  
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-title,
+  .hljs-section,
+  .hljs-doctag,
+  .hljs-type,
+  .hljs-name,
+  .hljs-strong {
+    font-weight: bold;
+  }
+  
+  .hljs-literal,
+  .hljs-number {
+    color: #bd93f9;
+  }
+  
+  .hljs-emphasis {
+    font-style: italic;
+  }
